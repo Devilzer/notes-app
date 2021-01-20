@@ -1,5 +1,6 @@
 const initialState = {
-    notes : []
+    notes : [],
+    search : ""
 };
 
 const reducer = (state = initialState, action)=>{
@@ -8,6 +9,11 @@ const reducer = (state = initialState, action)=>{
             return {
                 ...state,
                 notes : [...state.notes,action.payload]
+            };
+        case "UPDATE_SEARCH":
+            return{
+                ...state,
+                search : action.payload
             };
         default:
             return state;

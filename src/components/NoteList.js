@@ -1,73 +1,28 @@
 import React from 'react';
-
+import { useSelector } from "react-redux";
+import Note from "./Note";
 function NoteList() {
+    const state = useSelector(state => state);
+    var filtered = [];
+    if(state.note.search!==""){
+       filtered = state.note.notes.filter(note=>{
+           return note.title.toLowerCase().indexOf(state.note.search.toLowerCase())!==-1;
+       }) 
+    //    console.log(filtered);
+    }else{
+        filtered = [...state.note.notes];
+    }
     return (
         <div className="list-container">
-            <div className="note-container">
-                <div className="title">
-                    <h2>
-                        This is title.
-                    </h2>
-                </div>
-                <div className="date-btn">
-                    <h4>
-                        jan 21 2021
-                    </h4>
-                    <div className="btns">
-                        <button><i className="fas fa-pencil-alt edit"></i></button>
-                        <button><i className="far fa-trash-alt delete"></i></button>
-                    </div>
-                </div>
-            </div>
-
-            <div className="note-container">
-                <div className="title">
-                    <h2>
-                        This is title.
-                    </h2>
-                </div>
-                <div className="date-btn">
-                    <h4>
-                        jan 21 2021
-                    </h4>
-                    <div className="btns">
-                        <button><i className="fas fa-pencil-alt edit"></i></button>
-                        <button><i className="far fa-trash-alt delete"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div className="note-container">
-                <div className="title">
-                    <h2>
-                        This is title.
-                    </h2>
-                </div>
-                <div className="date-btn">
-                    <h4>
-                        jan 21 2021
-                    </h4>
-                    <div className="btns">
-                        <button><i className="fas fa-pencil-alt edit"></i></button>
-                        <button><i className="far fa-trash-alt delete"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div className="note-container">
-                <div className="title">
-                    <h2>
-                        This is title.
-                    </h2>
-                </div>
-                <div className="date-btn">
-                    <h4>
-                        jan 21 2021
-                    </h4>
-                    <div className="btns">
-                        <button><i className="fas fa-pencil-alt edit"></i></button>
-                        <button><i className="far fa-trash-alt delete"></i></button>
-                    </div>
-                </div>
-            </div>
+            {
+                filtered.map((note,index)=>(
+                    <Note
+                        note ={note}
+                        key={index}
+                        index={index}
+                    />
+                ))
+            }
 
 
         </div>

@@ -4,4 +4,9 @@ export const createNote = (value)=>{
         payload: value
     };
 };
-
+export const updateSearch = (text)=>{
+    return{
+        type : "UPDATE_SEARCH",
+        payload : text
+    };
+};
