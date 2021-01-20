@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import { useDispatch  } from "react-redux";
 import { createNote } from "../redux/actions/noteActions";
+import { showNotification } from "../config/noty";
 
 function NoteInput() {
     const today = new Date();
@@ -17,6 +18,7 @@ function NoteInput() {
     const handleClick = () =>{
         // console.log(value);
         if(value.title==="" || value.description===""){
+            showNotification("please fill all details");
             return;
         }
         dispatch(createNote(value));

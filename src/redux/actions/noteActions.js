@@ -1,4 +1,7 @@
+import { showNotification } from "../../config/noty";
+
 export const createNote = (value)=>{
+    showNotification("Note Created!");
     return{
         type:"CREATE_NOTE",
         payload: value
@@ -12,6 +15,7 @@ export const updateSearch = (text)=>{
 };
 
 export const deletNote = (id)=>{
+    showNotification("Note Deleted!");
     return {
         type : "DELETE_NOTE",
         payload : id
@@ -39,6 +43,7 @@ export const resetEditable = (id)=>{
 };
 
 export const editNote = (object)=>{
+    showNotification("Note Updated!");
     return{
         type : "EDIT_TODO",
         payload : object
