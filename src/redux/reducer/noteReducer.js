@@ -5,7 +5,10 @@ const initialState = {
 const reducer = (state = initialState, action)=>{
     switch (action.type) {
         case "CREATE_NOTE":
-            return state;
+            return {
+                ...state,
+                notes : [...state.notes,action.payload]
+            };
         default:
             return state;
     }
