@@ -1,5 +1,6 @@
 import './style/App.scss';
 import NoteInput from "./components/NoteInput";
+import SearchBox from "./components/SearchBox";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         Notes
       </h1>
       <NoteInput/>
+      <SearchBox/>
     </div>
   );
 }
