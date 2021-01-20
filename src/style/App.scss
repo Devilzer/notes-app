@@ -149,6 +149,72 @@ body {
         }
       }
     }
+    .note-detail-container {
+      .btns {
+        margin-top: 25px;
+        margin-right: 15px;
+        margin-left: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        button {
+          background-color: #3b3b3b;
+          color: #ecf3f9;
+          font-size: 25px;
+          height: 40px;
+          width: 40px;
+          outline: none;
+          border-radius: 15px;
+        }
+      }
+      .note-details {
+        margin-right: 15px;
+        margin-left: 15px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        h2 {
+          color: #ecf3f9;
+          width: 95%;
+          margin: auto;
+          font-weight: 500;
+        }
+        h4 {
+          width: 95%;
+          margin: auto;
+          margin-top: 20px;
+          color: grey;
+        }
+        p {
+          line-height: 30px;
+          color: #ecf3f9;
+          width: 95%;
+          margin: auto;
+          margin-top: 20px;
+        }
+        input {
+          margin: auto;
+          color: #ecf3f9;
+          width: 95%;
+          font-size: 25px;
+          outline: none;
+          border: 2.5px solid #3b3b3b;
+          background-color: transparent;
+        }
+        textarea {
+          color: #ecf3f9;
+          resize: none;
+          width: 95%;
+          font-size: 18px;
+          height: 200px;
+          margin: auto;
+          margin-top: 20px;
+          outline: none;
+          border: 2.5px solid #3b3b3b;
+          background-color: transparent;
+        }
+      }
+    }
   }
   .App::-webkit-scrollbar {
     display: none;
