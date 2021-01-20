@@ -11,6 +11,8 @@ body {
     transform: translate(-50%, -50%);
     box-shadow: 0 0 5px 0px black;
     border-radius: 10px;
+    overflow-y: scroll;
+
     h1 {
       color: #ecf3f9;
       font-weight: 400;
@@ -72,6 +74,7 @@ body {
       display: flex;
       border-bottom: 2.5px solid #80deea;
       width: 100%;
+      margin-bottom: 10px;
       input {
         margin: auto;
         outline: none;
@@ -83,7 +86,70 @@ body {
         padding: 5px 10px;
         border-radius: 25px;
         color: #ecf3f9;
+        width: 60%;
       }
     }
+    .list-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .note-container {
+        background-color: #ffcc80;
+        width: 97.5%;
+        margin: auto;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        .title {
+          width: 97.5%;
+          h2 {
+            color: #252525;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+          }
+        }
+        .title:hover {
+          cursor: pointer;
+        }
+        .date-btn {
+          display: flex;
+          flex-direction: row;
+          width: 97.5%;
+          justify-content: space-between;
+          margin-bottom: 10px;
+          h4 {
+            margin-top: 5px;
+            margin-bottom: 0px;
+            font-weight: 500;
+            margin-left: 15px;
+            color: grey;
+          }
+          .btns {
+            button {
+              background-color: #ecf3f9;
+              color: #3b3b3b;
+              outline: none;
+              height: 40px;
+              width: 40px;
+              border-radius: 10px;
+              font-size: 25px;
+              margin-right: 5px;
+            }
+            button:hover {
+              cursor: pointer;
+            }
+            .delete:hover {
+              color: #ec4646;
+            }
+            .edit:hover {
+              color: #11698e;
+            }
+          }
+        }
+      }
+    }
+  }
+  .App::-webkit-scrollbar {
+    display: none;
   }
 }
