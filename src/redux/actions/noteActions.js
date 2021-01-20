@@ -10,3 +10,10 @@ export const updateSearch = (text)=>{
         payload : text
     };
 };
+
+export const deletNote = (id)=>{
+    return {
+        type : "DELETE_NOTE",
+        payload : id
+    };
+};

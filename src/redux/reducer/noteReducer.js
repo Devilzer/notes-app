@@ -1,6 +1,7 @@
 const initialState = {
     notes : [],
-    search : ""
+    search : "",
+    currentnote:{}
 };
 
 const reducer = (state = initialState, action)=>{
@@ -15,6 +16,14 @@ const reducer = (state = initialState, action)=>{
                 ...state,
                 search : action.payload
             };
+        case "DELETE_NOTE":
+            var deleteIndex = state.notes.findIndex(obj=>obj.id===action.payload);
+            const listAfterDelete = state.notes;
+            listAfterDelete.splice(deleteIndex,1);
+            return{
+                ...state,
+                notes : listAfterDelete
+            }
         default:
             return state;
     }

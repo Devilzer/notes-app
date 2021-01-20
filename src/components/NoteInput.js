@@ -1,15 +1,17 @@
 import React,{useState} from 'react';
-import { useDispatch } from "react-redux";
+import { useDispatch ,useSelector } from "react-redux";
 import { createNote } from "../redux/actions/noteActions";
 
 function NoteInput() {
     const today = new Date();
+    const state = useSelector(state => state);
     const dispatch = useDispatch();
     const [value,setValue]=useState({
         title :"",
         description :"",
         date : today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear(),
-        editable : false
+        editable : false,
+        id : Date.now()
     }); 
     
     const handleClick = () =>{
@@ -18,7 +20,7 @@ function NoteInput() {
             return;
         }
         dispatch(createNote(value));
-        setValue({...value,title:"",description:"",date:today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear()});
+        setValue({...value,title:"",description:"",date:today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear(),id:Date.now()});
     };
     return (
         <div className="input-container">

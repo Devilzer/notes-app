@@ -1,9 +1,12 @@
 import React from 'react';
-import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { deletNote } from "../redux/actions/noteActions";
 
-function Note({note}) {
-    const state = useSelector(state => state);
-
+function Note({note,index}) {
+    const dispatch = useDispatch();
+    const handleDelete = ()=>{
+        dispatch(deletNote(note.id));
+    }
     return (       
             <div className="note-container">
                 <div className="title">
@@ -17,7 +20,7 @@ function Note({note}) {
                     </h4>
                     <div className="btns">
                         <button><i className="fas fa-pencil-alt edit"></i></button>
-                        <button><i className="far fa-trash-alt delete"></i></button>
+                        <button onClick={handleDelete}><i className="far fa-trash-alt delete"></i></button>
                     </div>
                 </div>
             </div>
