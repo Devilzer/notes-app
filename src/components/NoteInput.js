@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
-import { useDispatch ,useSelector } from "react-redux";
+import { useDispatch  } from "react-redux";
 import { createNote } from "../redux/actions/noteActions";
 
 function NoteInput() {
     const today = new Date();
-    const state = useSelector(state => state);
+  
     const dispatch = useDispatch();
     const [value,setValue]=useState({
         title :"",

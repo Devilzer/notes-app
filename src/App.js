@@ -1,5 +1,6 @@
 import './style/App.scss';
 import HomePage from "./components/HomePage";
+import NoteDetails from "./components/NoteDetails";
 import { useSelector } from "react-redux";
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     pageElement = <HomePage/>
   }
   else{
-    console.log(state.note.currentnote);
+    // console.log(state.note.currentnote);
+    pageElement = <NoteDetails/>
   }
   return (
     <div className="App">
@@ -17,19 +19,7 @@ function App() {
         Notes
       </h1>
       {/* <HomePage/> */}
-      <div className="note-detail-container">
-        <div className="btns">
-          <button><i className="fas fa-chevron-left"></i></button>
-          <button><i className="fas fa-check"></i></button>
-        </div>
-        <div className="note-details">
-          <input type="text"/> 
-          <h4>
-            27-2-2021
-          </h4>
-          <textarea placeholder="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs."/>
-        </div> 
-      </div>
+      {pageElement}
 
 
       
