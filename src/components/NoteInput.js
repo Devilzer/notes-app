@@ -13,7 +13,10 @@ function NoteInput() {
     }); 
     
     const handleClick = () =>{
-        console.log(value);
+        // console.log(value);
+        if(value.title==="" || value.description===""){
+            return;
+        }
         dispatch(createNote(value));
         setValue({...value,title:"",description:"",date:today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear()});
     };

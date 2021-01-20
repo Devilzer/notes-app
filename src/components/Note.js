@@ -4,9 +4,7 @@ import { useSelector } from "react-redux";
 function Note({note}) {
     const state = useSelector(state => state);
 
-    
     return (       
-
             <div className="note-container">
                 <div className="title">
                     <h2>
@@ -23,7 +21,6 @@ function Note({note}) {
                     </div>
                 </div>
             </div>
-  
     )
 }
 
