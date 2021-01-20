@@ -1,0 +1,70 @@
+body {
+  background-color: #252525;
+  font-family: sans-serif;
+  .App {
+    height: 95%;
+    width: 40%;
+    // background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 5px 0px black;
+    border-radius: 25px;
+    h1 {
+      color: #ecf3f9;
+      font-weight: 400;
+      padding: 10px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      border-bottom: 2.5px solid #e6ee9b;
+    }
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 2.5px solid #cf93d9;
+      input {
+        color: #ecf3f9;
+        margin: auto;
+        width: 60%;
+        font-size: 25px;
+        background-color: transparent;
+        outline: none;
+        border: 2.5px solid #3b3b3b;
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+      textarea {
+        color: #ecf3f9;
+        margin: auto;
+        background-color: transparent;
+        resize: none;
+        border: 2.5px solid #3b3b3b;
+        outline: none;
+        margin-bottom: 10px;
+        font-size: 18px;
+        width: 60%;
+        padding: 5px;
+        height: 100px;
+      }
+      button {
+        background-color: #3b3b3b;
+        outline: none;
+        // border: none;
+        color: #ecf3f9;
+        font-size: 25px;
+        width: 20%;
+        padding: 5px;
+        border-radius: 25px;
+        // height: 25px;
+        margin: auto;
+        margin-bottom: 5px;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: #656668;
+        color: #ffffff;
+      }
+    }
+  }
+}
