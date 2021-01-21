@@ -24,7 +24,7 @@ Home page with Input form,Search bar and List of notes.
 <img src="images/detailsPage.png"/><br/>
 
 #### Notes Edit page.
-<img src="images/detailsPage.png"/><br/>
+<img src="images/edit.png"/><br/>
 
 ## Directory Structure
 `components` Contains all the React components.<br/>
