@@ -23,6 +23,9 @@ Home page with Input form,Search bar and List of notes.
 #### Notes Details page.
 <img src="images/detailsPage.png"/><br/>
 
+#### Notes Edit page.
+<img src="images/detailsPage.png"/><br/>
+
 ## Directory Structure
 `components` Contains all the React components.<br/>
 `redux` Contains Redux State mangement files (acitons,reducers).<br/>
