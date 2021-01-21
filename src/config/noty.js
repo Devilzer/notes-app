@@ -6,6 +6,6 @@ export const showNotification = (text)=> {
          layout : "bottomRight",
          theme : "nest",
          type : "alert",
-         timeout : 500,
+         timeout : 750,
      }).show();
 };

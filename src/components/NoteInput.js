@@ -1,11 +1,11 @@
 import React,{useState} from 'react';
-import { useDispatch  } from "react-redux";
+import { useDispatch , useSelector} from "react-redux";
 import { createNote } from "../redux/actions/noteActions";
 import { showNotification } from "../config/noty";
 
 function NoteInput() {
     const today = new Date();
-  
+    const state = useSelector(state => state);
     const dispatch = useDispatch();
     const [value,setValue]=useState({
         title :"",
@@ -16,9 +16,16 @@ function NoteInput() {
     }); 
     
     const handleClick = () =>{
+        const noteList = [...state.note.notes];
+        let index = noteList.findIndex(obj=>obj.title===value.title)
         // console.log(value);
+        
         if(value.title==="" || value.description===""){
-            showNotification("please fill all details");
+            showNotification("please fill all details.");
+            return;
+        }
+        else if(index!==-1){
+            showNotification("Title already exists.");
             return;
         }
         dispatch(createNote(value));
