@@ -219,4 +219,23 @@ body {
   .App::-webkit-scrollbar {
     display: none;
   }
+
+  @media all and (max-width: 800px) {
+    .App {
+      position: absolute;
+      width: 60%;
+    }
+  }
+  @media all and (max-width: 500px) {
+    .App {
+      position: absolute;
+      width: 80%;
+    }
+  }
+  @media all and (max-width: 330px) {
+    .App {
+      position: absolute;
+      width: 100%;
+    }
+  }
 }
