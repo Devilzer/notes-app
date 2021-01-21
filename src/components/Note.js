@@ -1,16 +1,21 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
+//redux actions
 import { deletNote,setCurrentNote,setEditable } from "../redux/actions/noteActions";
 
-function Note({note,index}) {
+function Note({note}) {
     const dispatch = useDispatch();
+
+    //delete note handler function
     const handleDelete = ()=>{
         dispatch(deletNote(note.id));
     }
+    //function to set note for details page  
     const handleCardClick= ()=>{
         dispatch(setCurrentNote(note));
-        // console.log(note);
     }
+
+    //set note edit status
     const handleEdit = ()=>{
         dispatch(setEditable(note.id));
         dispatch(setCurrentNote(note));

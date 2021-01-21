@@ -15,10 +15,11 @@ function NoteInput() {
         id : Date.now()
     }); 
     
+    //function to create a new node and reset inputs.
     const handleClick = () =>{
+        //checking title duplicacy.
         const noteList = [...state.note.notes];
         let index = noteList.findIndex(obj=>obj.title===value.title)
-        // console.log(value);
         
         if(value.title==="" || value.description===""){
             showNotification("please fill all details.");

@@ -1,5 +1,6 @@
 import noteReducer from "./reducer/noteReducer";
 import { combineReducers } from "redux";
+//for persistant redux
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 

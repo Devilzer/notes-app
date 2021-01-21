@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { useDispatch,useSelector } from "react-redux";
+//redux actions
 import { setCurrentNote, setEditable,resetEditable,editNote} from "../redux/actions/noteActions";
 function NoteDetails() {
     const dispatch = useDispatch();
@@ -13,21 +14,26 @@ function NoteDetails() {
         editable:false
     });
 
+    //function to reset the note edit status and remove the currentnote.
     const handleBackClick = ()=>{
         dispatch(resetEditable(state.note.currentnote.id));
         const obj = {};
         dispatch(setCurrentNote(obj));
     }
 
+    //function to set note edit status .
     const handleEditClick = ()=>{
         dispatch(setEditable(state.note.currentnote.id));
     }
 
+    //function to set updated note details
     const handleSubmitEdit=()=>{
         dispatch(editNote(value));
         setValue({...value,editable:false});
     }
 
+
+    //Note detaile page Element updated based on note edit status.
     var noteDetailsElement;
     if(state.note.currentnote.editable){
         noteDetailsElement = <div className="note-detail-container">

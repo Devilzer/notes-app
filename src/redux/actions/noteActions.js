@@ -1,5 +1,6 @@
 import { showNotification } from "../../config/noty";
 
+//create note action  
 export const createNote = (value)=>{
     showNotification("Note Created!");
     return{
@@ -7,6 +8,8 @@ export const createNote = (value)=>{
         payload: value
     };
 };
+
+//action to update search value
 export const updateSearch = (text)=>{
     return{
         type : "UPDATE_SEARCH",
@@ -14,6 +17,7 @@ export const updateSearch = (text)=>{
     };
 };
 
+//action to delete note based in id
 export const deletNote = (id)=>{
     showNotification("Note Deleted!");
     return {
@@ -22,6 +26,7 @@ export const deletNote = (id)=>{
     };
 };
 
+//action for setting current note for note details page 
 export const setCurrentNote = (object)=>{
     return{
         type:"SET_CURRENT_NOTE",
@@ -29,12 +34,15 @@ export const setCurrentNote = (object)=>{
     };
 };
 
+//action to update the note edit status
 export const setEditable = (id)=>{
     return{
         type:"SET_EDIT",
         payload : id
     };
 };
+
+//action to update the note edit status
 export const resetEditable = (id)=>{
     return{
         type:"RESET_EDIT",
@@ -42,6 +50,7 @@ export const resetEditable = (id)=>{
     };
 };
 
+//action to update the note with new details
 export const editNote = (object)=>{
     showNotification("Note Updated!");
     return{

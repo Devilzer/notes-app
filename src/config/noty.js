@@ -1,6 +1,6 @@
 import Noty from "noty";
 
-//noty js config to show noyifications
+//noty js config to show notifications
 export const showNotification = (text)=> {
      new Noty({
          text : text,

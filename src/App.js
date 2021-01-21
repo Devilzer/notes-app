@@ -8,12 +8,12 @@ import "../node_modules/noty/lib/themes/nest.css";
 
 function App() {
   const state = useSelector(state => state);
+  //updating page based on state.
   var pageElement;
   if(Object.keys(state.note.currentnote).length === 0 && state.note.currentnote.constructor === Object){
     pageElement = <HomePage/>
   }
   else{
-    // console.log(state.note.currentnote);
     pageElement = <NoteDetails/>
   }
   return (
@@ -21,14 +21,7 @@ function App() {
       <h1>
         Notes
       </h1>
-      {/* <HomePage/> */}
       {pageElement}
-
-
-      
-
-
-
     </div>
   );
 }
