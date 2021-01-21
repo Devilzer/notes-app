@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/notes-app/static/css/main.d033946e.chunk.css",
-    "main.js": "/notes-app/static/js/main.10eca23c.chunk.js",
-    "main.js.map": "/notes-app/static/js/main.10eca23c.chunk.js.map",
+    "main.css": "/notes-app/static/css/main.9ce1ea5d.chunk.css",
+    "main.js": "/notes-app/static/js/main.61763abf.chunk.js",
+    "main.js.map": "/notes-app/static/js/main.61763abf.chunk.js.map",
     "runtime-main.js": "/notes-app/static/js/runtime-main.c1c35862.js",
     "runtime-main.js.map": "/notes-app/static/js/runtime-main.c1c35862.js.map",
     "static/css/2.9d088f77.chunk.css": "/notes-app/static/css/2.9d088f77.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.bdaba1f3.chunk.js.map": "/notes-app/static/js/2.bdaba1f3.chunk.js.map",
     "index.html": "/notes-app/index.html",
     "static/css/2.9d088f77.chunk.css.map": "/notes-app/static/css/2.9d088f77.chunk.css.map",
-    "static/css/main.d033946e.chunk.css.map": "/notes-app/static/css/main.d033946e.chunk.css.map",
+    "static/css/main.9ce1ea5d.chunk.css.map": "/notes-app/static/css/main.9ce1ea5d.chunk.css.map",
     "static/js/2.bdaba1f3.chunk.js.LICENSE.txt": "/notes-app/static/js/2.bdaba1f3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c1c35862.js",
     "static/css/2.9d088f77.chunk.css",
     "static/js/2.bdaba1f3.chunk.js",
-    "static/css/main.d033946e.chunk.css",
-    "static/js/main.10eca23c.chunk.js"
+    "static/css/main.9ce1ea5d.chunk.css",
+    "static/js/main.61763abf.chunk.js"
   ]
 }
